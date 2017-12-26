@@ -44,7 +44,6 @@ Param(
     [string]$Script = "build.cake",
     [string]$Target,
     [string]$Configuration,
-    [switch]$IsLocalbuild,
     [ValidateSet("Quiet", "Minimal", "Normal", "Verbose", "Diagnostic")]
     [string]$Verbosity = "Verbose",
     [switch]$ShowDescription,
@@ -57,10 +56,9 @@ Param(
     [string[]]$ScriptArgs
 )
 
-Write-Output "LocalBuild = $IsLocalbuild"
-
-$directorypath = Split-Path $MyInvocation.MyCommand.Path
-$Script = "$directorypath\build.cake"
+## Build lacal cake path
+$rootPath = Split-Path $MyInvocation.MyCommand.Path
+$Script = "$rootPath\build.cake"
 
 [Reflection.Assembly]::LoadWithPartialName("System.Security") | Out-Null
 function MD5HashFile([string] $filePath)
@@ -102,7 +100,7 @@ if(!$PSScriptRoot){
     $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 }
 
-$TOOLS_DIR = Join-Path $PSScriptRoot "\tools"
+$TOOLS_DIR = Join-Path $rootPath "\tools"
 $ADDINS_DIR = Join-Path $TOOLS_DIR "Addins"
 $MODULES_DIR = Join-Path $TOOLS_DIR "Modules"
 $NUGET_EXE = Join-Path $TOOLS_DIR "nuget.exe"
@@ -233,7 +231,6 @@ if ($ShowDescription) { $cakeArguments += "-showdescription" }
 if ($DryRun) { $cakeArguments += "-dryrun" }
 if ($Experimental) { $cakeArguments += "-experimental" }
 if ($Mono) { $cakeArguments += "-mono" }
-if ($IsLocalbuid) { $cakeArguments += "-localbuild=$IsLocalbuid" }
 $cakeArguments += $ScriptArgs
 
 # Start Cake

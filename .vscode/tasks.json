@@ -12,8 +12,7 @@
                 "Unrestricted",
                 "-NoProfile",
                 "-File",
-                "${cwd}/Build.ps1",
-                "-IsLocalBuild"    
+                "${cwd}/Build.ps1"
             ],
             "group": {
                 "kind": "build",

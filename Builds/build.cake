@@ -57,7 +57,6 @@ Task("Build")
 });
 
 Task("IncrementBuildNumber") 
-.WithCriteria(IsLocalbuild == "False")
 .DoesForEach(csProjPathArray, (file) => 
 {
     Information("Incrementing build version on project : " + file.FullPath);  

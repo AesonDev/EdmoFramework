@@ -12,8 +12,7 @@
             "args": [
                 "${workspaceRoot}/Builds/build.cake",
                 "--debug",
-                "--verbosity=diagnostic",
-                "-IsLocalbuild"
+                "--verbosity=diagnostic"
             ],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": true,
