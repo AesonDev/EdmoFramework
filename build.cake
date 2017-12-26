@@ -51,6 +51,7 @@ Task("Build")
             }
         );
 
+        Information(versionInfo.FullSemVer);
         DotNetCoreBuild(
             file.FullPath,
             new DotNetCoreBuildSettings{
