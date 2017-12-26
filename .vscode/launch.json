@@ -8,12 +8,11 @@
             "name": "Cake: Debug Script (CoreCLR)",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceRoot}/Builds/tools/Cake.CoreCLR/Cake.dll",
+            "program": "${workspaceRoot}/tools/Cake.CoreCLR/Cake.dll",
             "args": [
-                "${workspaceRoot}/Builds/build.cake",
+                "${workspaceRoot}/build.cake",
                 "--debug",
-                "--verbosity=diagnostic",
-                "-IsLocalbuild"
+                "--verbosity=diagnostic"
             ],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": true,
