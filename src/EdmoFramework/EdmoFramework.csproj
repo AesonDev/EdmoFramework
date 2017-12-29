@@ -2,7 +2,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Product>EdmoFramework</Product>
-    <Version>$(SemVer)</Version>
+    <Major>$(Major)</Major>
+    <Minor>$(Minor)</Minor>
+    <Patch>$(Patch)</Patch>
+    <Suffix>$(Suffix)</Suffix>
+    <FileVersion>$(Major).$(Minor).$(Patch).$(Suffix)</FileVersion>
+    <VersionPrefix>$(Major).$(Minor).$(Patch)</VersionPrefix> 
+    <VersionSuffix Condition=" '$(Suffix)' != ''" >$(Suffix)-$(BuildNumber)</VersionSuffix> 
+    <PackageTags>$(TargetFramework)</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Serilog" Version="2.6.0" />
