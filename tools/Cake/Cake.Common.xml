@@ -592,14 +592,78 @@
             <value>
               The AppVeyor build agent API URL.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"API URL:{0},
+                    BuildSystem.AppVeyor.Environment.ApiUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
+            <para>Via AppVeyor</para>
+            <example>
+            <code>
+            if (AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"API URL:{0},
+                    AppVeyor.Environment.ApiUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.AppVeyor.Data.AppVeyorEnvironmentInfo.JobId">
             <summary>
             Gets the AppVeyor unique job ID.
             </summary>
             <value>
-              The AppVeyor unique job ID.
+             The AppVeyor unique job ID.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Job Id:{0},
+                    BuildSystem.AppVeyor.Environment.JobId
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
+            <para>Via AppVeyor</para>
+            <example>
+            <code>
+            if (AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Job Id:{0},
+                    AppVeyor.Environment.JobId
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.AppVeyor.Data.AppVeyorEnvironmentInfo.JobName">
             <summary>
@@ -608,6 +672,38 @@
             <value>
               The AppVeyor Job Name.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Job Name:{0},
+                    BuildSystem.AppVeyor.Environment.JobName
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
+            <para>Via AppVeyor</para>
+            <example>
+            <code>
+            if (AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Job Name:{0},
+                    AppVeyor.Environment.JobName
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.AppVeyor.Data.AppVeyorEnvironmentInfo.ScheduledBuild">
             <summary>
@@ -616,6 +712,38 @@
             <value>
               <c>true</c> if the build runs by scheduler; otherwise, <c>false</c>.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Scheduled Build:{0},
+                    BuildSystem.AppVeyor.Environment.ScheduledBuild
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
+            <para>Via AppVeyor</para>
+            <example>
+            <code>
+            if (AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Scheduled Build:{0},
+                    AppVeyor.Environment.ScheduledBuild
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.AppVeyor.Data.AppVeyorEnvironmentInfo.Platform">
             <summary>
@@ -624,6 +752,38 @@
             <value>
               The platform name set on build tab of project settings (or through platform parameter in appveyor.yml).
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Platform:{0},
+                    BuildSystem.AppVeyor.Environment.Platform
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
+            <para>Via AppVeyor</para>
+            <example>
+            <code>
+            if (AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Platform:{0},
+                    AppVeyor.Environment.Platform
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.AppVeyor.Data.AppVeyorEnvironmentInfo.Configuration">
             <summary>
@@ -632,6 +792,38 @@
             <value>
               The configuration name set on build tab of project settings (or through configuration parameter in appveyor.yml).
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Configuration:{0},
+                    BuildSystem.AppVeyor.Environment.Configuration
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
+            <para>Via AppVeyor</para>
+            <example>
+            <code>
+            if (AppVeyor.IsRunningOnAppVeyor)
+            {
+                Information(
+                    @"Configuration:{0},
+                    AppVeyor.Environment.Configuration
+                    );
+            }
+            else
+            {
+                Information("Not running on AppVeyor");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.AppVeyor.Data.AppVeyorEnvironmentInfo.Project">
             <summary>
@@ -1519,6 +1711,60 @@
             <value>
               The Bamboo plan information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bamboo.IsRunningOnBamboo)
+            {
+                Information(
+                    @"Build:
+                    Plan Name: {0}
+                    Short Plan Name: {1}
+                    Plan Key: {2}
+                    Short Plan Key: {3}
+                    Short Job Key: {4}
+                    Short Job Name: {5}",
+                    BuildSystem.Bamboo.Environment.Plan.PlanName,
+                    BuildSystem.Bamboo.Environment.Plan.ShortPlanName,
+                    BuildSystem.Bamboo.Environment.Plan.PlanKey,
+                    BuildSystem.Bamboo.Environment.Plan.ShortPlanKey,
+                    BuildSystem.Bamboo.Environment.Plan.ShortJobKey,
+                    BuildSystem.Bamboo.Environment.Plan.ShortJobName
+                    );
+            }
+            else
+            {
+                Information("Not running on Bamboo");
+            }
+            </code>
+            </example>
+            <para>Via Bamboo</para>
+            <example>
+            <code>
+            if (Bamboo.IsRunningOnBamboo)
+            {
+                Information(
+                    @"Build:
+                    Plan Name: {0}
+                    Short Plan Name: {1}
+                    Plan Key: {2}
+                    Short Plan Key: {3}
+                    Short Job Key: {4}
+                    Short Job Name: {5}",
+                    Bamboo.Environment.Plan.PlanName,
+                    Bamboo.Environment.Plan.ShortPlanName,
+                    Bamboo.Environment.Plan.PlanKey,
+                    Bamboo.Environment.Plan.ShortPlanKey,
+                    Bamboo.Environment.Plan.ShortJobKey,
+                    Bamboo.Environment.Plan.ShortJobName
+                    );
+            }
+            else
+            {
+                Information("Not running on Bamboo");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bamboo.Data.BambooEnvironmentInfo.Build">
             <summary>
@@ -1527,6 +1773,68 @@
             <value>
               The Bamboo build information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bamboo.IsRunningOnBamboo)
+            {
+                Information(
+                    @"Build:
+                    Folder: {0}
+                    Number: {1}
+                    Build Key: {2}
+                    Result Key: {3}
+                    Results Url: {4}
+                    Build Timestamp: {5}
+                    Is Custom: {6}
+                    Revision Name: {7}",
+                    BuildSystem.Bamboo.Environment.Build.Folder,
+                    BuildSystem.Bamboo.Environment.Build.Number,
+                    BuildSystem.Bamboo.Environment.Build.BuildKey,
+                    BuildSystem.Bamboo.Environment.Build.ResultKey,
+                    BuildSystem.Bamboo.Environment.Build.ResultsUrl,
+                    BuildSystem.Bamboo.Environment.Build.BuildTimestamp,
+                    BuildSystem.Bamboo.Environment.Build.CustomBuild.IsCustomBuld,
+                    BuildSystem.Bamboo.Environment.Build.CustomBuild.RevisionName
+                    );
+            }
+            else
+            {
+                Information("Not running on Bamboo");
+            }
+            </code>
+            </example>
+            <para>Via Bamboo</para>
+            <example>
+            <code>
+            if (Bamboo.IsRunningOnBamboo)
+            {
+                Information(
+                    @"Build:
+                    Folder: {0}
+                    Number: {1}
+                    Build Key: {2}
+                    Result Key: {3}
+                    Results Url: {4}
+                    Build Timestamp: {5}
+                    Is Custom: {6}
+                    Revision Name: {7}",
+                    Bamboo.Environment.Build.Folder,
+                    Bamboo.Environment.Build.Number,
+                    Bamboo.Environment.Build.BuildKey,
+                    Bamboo.Environment.Build.ResultKey,
+                    Bamboo.Environment.Build.ResultsUrl,
+                    Bamboo.Environment.Build.BuildTimestamp,
+                    Bamboo.Environment.Build.CustomBuild.IsCustomBuld,
+                    Bamboo.Environment.Build.CustomBuild.RevisionName
+                    );
+            }
+            else
+            {
+                Information("Not running on Bamboo");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bamboo.Data.BambooEnvironmentInfo.Repository">
             <summary>
@@ -1535,6 +1843,52 @@
             <value>
               The Bamboo repository information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bamboo.IsRunningOnBamboo)
+            {
+                Information(
+                    @"Repository:
+                    Branch: {0}
+                    Name: {1}
+                    Repository Revision: {2}
+                    Scm: {3}",
+                    BuildSystem.Bamboo.Environment.Repository.Branch,
+                    BuildSystem.Bamboo.Environment.Repository.Name,
+                    BuildSystem.Bamboo.Environment.Repository.Commit.RepositoryRevision,
+                    BuildSystem.Bamboo.Environment.Repository.Scm
+                    );
+            }
+            else
+            {
+                Information("Not running on Bamboo");
+            }
+            </code>
+            </example>
+            <para>Via Bamboo</para>
+            <example>
+            <code>
+            if (Bamboo.IsRunningOnBamboo)
+            {
+                Information(
+                    @"Repository:
+                    Branch: {0}
+                    Name: {1}
+                    Repository Revision: {2}
+                    Scm: {3}",
+                    Bamboo.Environment.Repository.Branch,
+                    Bamboo.Environment.Repository.Name,
+                    Bamboo.Environment.Repository.Commit.RepositoryRevision,
+                    Bamboo.Environment.Repository.Scm
+                    );
+            }
+            else
+            {
+                Information("Not running on Bamboo");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.Bamboo.Data.BambooEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -1739,6 +2093,56 @@
             <value>
             The repository.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.BitbucketPipelines.IsRunningOnBitbucketPipelines)
+            {
+                Information(
+                    @"Repository:
+                    Branch: {0}
+                    Tag: {1}
+                    Commit: {2}
+                    Repo Owner: {3}
+                    Repo Slug: {4}",
+                    BuildSystem.BitbucketPipelines.Environment.Repository.Branch,
+                    BuildSystem.BitbucketPipelines.Environment.Repository.Tag,
+                    BuildSystem.BitbucketPipelines.Environment.Repository.Commit,
+                    BuildSystem.BitbucketPipelines.Environment.Repository.RepoOwner,
+                    BuildSystem.BitbucketPipelines.Environment.Repository.RepoSlug
+                    );
+            }
+            else
+            {
+                Information("Not running on BitbucketPipelines");
+            }
+            </code>
+            </example>
+            <para>Via BitbucketPipelines</para>
+            <example>
+            <code>
+            if (BitbucketPipelines.IsRunningOnBitbucketPipelines)
+            {
+                Information(
+                    @"Repository:
+                    Branch: {0}
+                    Tag: {1}
+                    Commit: {2}
+                    Repo Owner: {3}
+                    Repo Slug: {4}",
+                    BitbucketPipelines.Environment.Repository.Branch,
+                    BitbucketPipelines.Environment.Repository.Tag,
+                    BitbucketPipelines.Environment.Repository.Commit,
+                    BitbucketPipelines.Environment.Repository.RepoOwner,
+                    BitbucketPipelines.Environment.Repository.RepoSlug
+                    );
+            }
+            else
+            {
+                Information("Not running on BitbucketPipelines");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.BitbucketPipelines.Data.BitbucketPipelinesEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -1997,6 +2401,48 @@
             <value>
             The application.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Application:
+                    Title: {0}
+                    Url: {1}
+                    Slug: {2}",
+                    BuildSystem.Bitrise.Environment.Application.ApplicationTitle,
+                    BuildSystem.Bitrise.Environment.Application.ApplicationUrl,
+                    BuildSystem.Bitrise.Environment.Application.AppSlug
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
+            <para>Via Bitrise</para>
+            <example>
+            <code>
+            if (Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Application:
+                    Title: {0}
+                    Url: {1}
+                    Slug: {2}",
+                    Bitrise.Environment.Application.ApplicationTitle,
+                    Bitrise.Environment.Application.ApplicationUrl,
+                    Bitrise.Environment.Application.AppSlug
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bitrise.Data.BitriseEnvironmentInfo.Build">
             <summary>
@@ -2005,6 +2451,56 @@
             <value>
             The build.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Build:
+                    Build Number: {0}
+                    Build Url: {1}
+                    Build Slug: {2}
+                    Build Trigger Timestamp: {3}
+                    Build Status: {4}",
+                    BuildSystem.Bitrise.Environment.Build.BuildNumber,
+                    BuildSystem.Bitrise.Environment.Build.BuildUrl,
+                    BuildSystem.Bitrise.Environment.Build.BuildSlug,
+                    BuildSystem.Bitrise.Environment.Build.BuildTriggerTimestamp,
+                    BuildSystem.Bitrise.Environment.Build.BuildStatus
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
+            <para>Via Bitrise</para>
+            <example>
+            <code>
+            if (Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Build:
+                    Build Number: {0}
+                    Build Url: {1}
+                    Build Slug: {2}
+                    Build Trigger Timestamp: {3}
+                    Build Status: {4}",
+                    Bitrise.Environment.Build.BuildNumber,
+                    Bitrise.Environment.Build.BuildUrl,
+                    Bitrise.Environment.Build.BuildSlug,
+                    Bitrise.Environment.Build.BuildTriggerTimestamp,
+                    Bitrise.Environment.Build.BuildStatus
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bitrise.Data.BitriseEnvironmentInfo.Directory">
             <summary>
@@ -2013,6 +2509,44 @@
             <value>
             The directory.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Directory:
+                    Source Directory: {0}
+                    Deploy Directory: {1}",
+                    BuildSystem.Bitrise.Environment.Directory.SourceDirectory,
+                    BuildSystem.Bitrise.Environment.Directory.DeployDirectory
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
+            <para>Via Bitrise</para>
+            <example>
+            <code>
+            if (Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Directory:
+                    Source Directory: {0}
+                    Deploy Directory: {1}",
+                    Bitrise.Environment.Directory.SourceDirectory,
+                    Bitrise.Environment.Directory.DeployDirectory
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bitrise.Data.BitriseEnvironmentInfo.Provisioning">
             <summary>
@@ -2021,6 +2555,48 @@
             <value>
             The provisioning.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Provisioning:
+                    Provision Url: {0}
+                    Certificate Url: {1}
+                    Certificate Passphrase: {2}",
+                    BuildSystem.Bitrise.Environment.Provisioning.ProvisionUrl,
+                    BuildSystem.Bitrise.Environment.Provisioning.CertificateUrl,
+                    BuildSystem.Bitrise.Environment.Provisioning.CertificatePassphrase
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
+            <para>Via Bitrise</para>
+            <example>
+            <code>
+            if (Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Provisioning:
+                    Provision Url: {0}
+                    Certificate Url: {1}
+                    Certificate Passphrase: {2}",
+                    Bitrise.Environment.Provisioning.ProvisionUrl,
+                    Bitrise.Environment.Provisioning.CertificateUrl,
+                    Bitrise.Environment.Provisioning.CertificatePassphrase
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bitrise.Data.BitriseEnvironmentInfo.Repository">
             <summary>
@@ -2029,6 +2605,56 @@
             <value>
             The repository.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Repository:
+                    Git Repository Url: {0}
+                    Git Branch: {1}
+                    Git Tag: {2}
+                    Git Commit: {3}
+                    Pull Request: {4}",
+                    BuildSystem.Bitrise.Environment.Repository.GitRepositoryUrl,
+                    BuildSystem.Bitrise.Environment.Repository.GitBranch,
+                    BuildSystem.Bitrise.Environment.Repository.GitTag,
+                    BuildSystem.Bitrise.Environment.Repository.GitCommit,
+                    BuildSystem.Bitrise.Environment.Repository.PullRequest
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
+            <para>Via Bitrise</para>
+            <example>
+            <code>
+            if (Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Repository:
+                    Git Repository Url: {0}
+                    Git Branch: {1}
+                    Git Tag: {2}
+                    Git Commit: {3}
+                    Pull Request: {4}",
+                    Bitrise.Environment.Repository.GitRepositoryUrl,
+                    Bitrise.Environment.Repository.GitBranch,
+                    Bitrise.Environment.Repository.GitTag,
+                    Bitrise.Environment.Repository.GitCommit,
+                    Bitrise.Environment.Repository.PullRequest
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Bitrise.Data.BitriseEnvironmentInfo.Workflow">
             <summary>
@@ -2037,6 +2663,44 @@
             <value>
             The workflow.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Workflow:
+                    Workflow Id: {0}
+                    Workflow Title: {1}",
+                    BuildSystem.Bitrise.Environment.Workflow.WorkflowId,
+                    BuildSystem.Bitrise.Environment.Workflow.WorkflowTitle
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
+            <para>Via Bitrise</para>
+            <example>
+            <code>
+            if (Bitrise.IsRunningOnBitrise)
+            {
+                Information(
+                    @"Workflow:
+                    Workflow Id: {0}
+                    Workflow Title: {1}",
+                    Bitrise.Environment.Workflow.WorkflowId,
+                    Bitrise.Environment.Workflow.WorkflowTitle
+                    );
+            }
+            else
+            {
+                Information("Not running on Bitrise");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.Bitrise.Data.BitriseEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -3161,6 +3825,40 @@
             <value>
               The Continua CI configuration information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Configuration:
+                    Name: {0}",
+                    BuildSystem.ContinuaCI.Environment.Configuration.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
+            <para>Via ContinuaCI</para>
+            <example>
+            <code>
+            if (ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Configuration:
+                    Name: {0}",
+                    ContinuaCI.Environment.Configuration.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.ContinuaCI.Data.ContinuaCIEnvironmentInfo.Project">
             <summary>
@@ -3169,6 +3867,40 @@
             <value>
               The Continua CI project information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Project:
+                    Name: {0}",
+                    BuildSystem.ContinuaCI.Environment.Project.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
+            <para>Via ContinuaCI</para>
+            <example>
+            <code>
+            if (ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Project:
+                    Name: {0}",
+                    ContinuaCI.Environment.Project.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.ContinuaCI.Data.ContinuaCIEnvironmentInfo.Build">
             <summary>
@@ -3177,6 +3909,60 @@
             <value>
               The Continua CI build information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Build:
+                    Id: {0}
+                    Version: {1}
+                    Started By: {2}
+                    Is Feature Branch Build: {3}
+                    Build Number: {4}
+                    Started: {5}",
+                    BuildSystem.ContinuaCI.Environment.Build.Id,
+                    BuildSystem.ContinuaCI.Environment.Build.Version,
+                    BuildSystem.ContinuaCI.Environment.Build.StartedBy,
+                    BuildSystem.ContinuaCI.Environment.Build.IsFeatureBranchBuild,
+                    BuildSystem.ContinuaCI.Environment.Build.BuildNumber,
+                    BuildSystem.ContinuaCI.Environment.Build.Started
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
+            <para>Via ContinuaCI</para>
+            <example>
+            <code>
+            if (ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Build:
+                    Id: {0}
+                    Version: {1}
+                    Started By: {2}
+                    Is Feature Branch Build: {3}
+                    Build Number: {4}
+                    Started: {5}",
+                    ContinuaCI.Environment.Build.Id,
+                    ContinuaCI.Environment.Build.Version,
+                    ContinuaCI.Environment.Build.StartedBy,
+                    ContinuaCI.Environment.Build.IsFeatureBranchBuild,
+                    ContinuaCI.Environment.Build.BuildNumber,
+                    ContinuaCI.Environment.Build.Started
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.ContinuaCI.Data.ContinuaCIEnvironmentInfo.Variable">
             <summary>
@@ -3185,6 +3971,46 @@
             <value>
               The Continua CI build variables.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Variables:
+                    {0}",
+                    BuildSystem.ContinuaCI.Environment.Variable.Aggregate(
+                    new StringBuilder(),(builder, pair) => builder.AppendLine(
+                    string.Format(":", pair.Key, pair.Value)),
+                    builder => builder.ToString())
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
+            <para>Via ContinuaCI</para>
+            <example>
+            <code>
+            if (ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Variables:
+                    {0}",
+                    ContinuaCI.Environment.Variable.Aggregate(
+                    new StringBuilder(),(builder, pair) => builder.AppendLine(
+                    string.Format(":", pair.Key, pair.Value)),
+                    builder => builder.ToString())
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.ContinuaCI.Data.ContinuaCIEnvironmentInfo.AgentProperty">
             <summary>
@@ -3193,6 +4019,46 @@
             <value>
               The Continua CI build agent properties.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Agent Property:
+                    {0}",
+                    BuildSystem.ContinuaCI.Environment.AgentProperty.Aggregate(
+                    new StringBuilder(),(builder, pair) => builder.AppendLine(
+                    string.Format(":", pair.Key, pair.Value)),
+                    builder => builder.ToString())
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
+            <para>Via ContinuaCI</para>
+            <example>
+            <code>
+            if (ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Variables:
+                    {0}",
+                    ContinuaCI.Environment.AgentProperty.Aggregate(
+                    new StringBuilder(),(builder, pair) => builder.AppendLine(
+                    string.Format(":", pair.Key, pair.Value)),
+                    builder => builder.ToString())
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.ContinuaCI.Data.ContinuaCIEnvironmentInfo.Version">
             <summary>
@@ -3201,6 +4067,38 @@
             <value>
               The Continua CI product version.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Version: {0}",
+                    BuildSystem.ContinuaCI.Environment.Version
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
+            <para>Via ContinuaCI</para>
+            <example>
+            <code>
+            if (ContinuaCI.IsRunningOnContinuaCI)
+            {
+                Information(
+                    @"Version: {0}",
+                    ContinuaCI.Environment.Version
+                    );
+            }
+            else
+            {
+                Information("Not running on ContinuaCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="T:Cake.Common.Build.ContinuaCI.Data.ContinuaCIProjectInfo">
             <summary>
@@ -3415,6 +4313,48 @@
             <value>
             The GitLab CI runner information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+            {
+                Information(
+                    @"Runner:
+                    Id: {0}
+                    Description: {1}
+                    Tags: {2}",
+                    BuildSystem.GitLabCI.Environment.Runner.Id,
+                    BuildSystem.GitLabCI.Environment.Runner.Description,
+                    BuildSystem.GitLabCI.Environment.Runner.Tags
+                    );
+            }
+            else
+            {
+                Information("Not running on GitLabCI");
+            }
+            </code>
+            </example>
+            <para>Via GitLabCI</para>
+            <example>
+            <code>
+            if (GitLabCI.IsRunningOnGitLabCI)
+            {
+                Information(
+                    @"Runner:
+                    Id: {0}
+                    Description: {1}
+                    Tags: {2}",
+                    GitLabCI.Environment.Runner.Id,
+                    GitLabCI.Environment.Runner.Description,
+                    GitLabCI.Environment.Runner.Tags
+                    );
+            }
+            else
+            {
+                Information("Not running on GitLabCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GitLabCI.Data.GitLabCIEnvironmentInfo.Server">
             <summary>
@@ -3423,6 +4363,48 @@
             <value>
             The GitLab CI server information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+            {
+                Information(
+                    @"Server:
+                    Name: {0}
+                    Version: {1}
+                    Revision: {2}",
+                    BuildSystem.GitLabCI.Environment.Server.Name,
+                    BuildSystem.GitLabCI.Environment.Server.Version,
+                    BuildSystem.GitLabCI.Environment.Server.Revision
+                    );
+            }
+            else
+            {
+                Information("Not running on GitLabCI");
+            }
+            </code>
+            </example>
+            <para>Via GitLabCI</para>
+            <example>
+            <code>
+            if (GitLabCI.IsRunningOnGitLabCI)
+            {
+                Information(
+                    @"Server:
+                    Name: {0}
+                    Version: {1}
+                    Revision: {2}",
+                    GitLabCI.Environment.Server.Name,
+                    GitLabCI.Environment.Server.Version,
+                    GitLabCI.Environment.Server.Revision
+                    );
+            }
+            else
+            {
+                Information("Not running on GitLabCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GitLabCI.Data.GitLabCIEnvironmentInfo.Build">
             <summary>
@@ -3431,6 +4413,49 @@
             <value>
             The GitLab CI build information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+            {
+                Information(
+                    @"Build:
+                    Id: {0}
+                    Reference: {1}
+                    Tag: {2}
+                    Name: {3}
+                    Stage: {4}",
+                    BuildSystem.GitLabCI.Environment.Build.Id,
+                    BuildSystem.GitLabCI.Environment.Build.Reference,
+                    BuildSystem.GitLabCI.Environment.Build.Tag,
+                    BuildSystem.GitLabCI.Environment.Build.Tag,
+                    BuildSystem.GitLabCI.Environment.Build.Stage
+                    );
+            }
+            else
+            {
+                Information("Not running on GitLabCI");
+            }
+            </code>
+            </example>
+            <para>Via GitLabCI</para>
+            <example>
+            <code>
+                Information(
+                    @"Build:
+                    Id: {0}
+                    Reference: {1}
+                    Tag: {2}
+                    Name: {3}
+                    Stage: {4}",
+                    GitLabCI.Environment.Build.Id,
+                    GitLabCI.Environment.Build.Reference,
+                    GitLabCI.Environment.Build.Tag,
+                    GitLabCI.Environment.Build.Tag,
+                    GitLabCI.Environment.Build.Stage
+                    );
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GitLabCI.Data.GitLabCIEnvironmentInfo.Project">
             <summary>
@@ -3439,6 +4464,53 @@
             <value>
             The GitLab CI project information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GitLabCI.IsRunningOnGitLabCI)
+            {
+                Information(
+                    @"Project:
+                    Id: {0}
+                    Name: {1}
+                    Namespace: {2}
+                    Path: {3}
+                    Url: {4}
+                    Directory: {5}",
+                    BuildSystem.GitLabCI.Environment.Project.Id,
+                    BuildSystem.GitLabCI.Environment.Project.Name,
+                    BuildSystem.GitLabCI.Environment.Project.Namespace,
+                    BuildSystem.GitLabCI.Environment.Project.Path,
+                    BuildSystem.GitLabCI.Environment.Project.Url,
+                    BuildSystem.GitLabCI.Environment.Project.Directory
+                    );
+            }
+            else
+            {
+                Information("Not running on GitLabCI");
+            }
+            </code>
+            </example>
+            <para>Via GitLabCI</para>
+            <example>
+            <code>
+                Information(
+                    @"Project:
+                    Id: {0}
+                    Name: {1}
+                    Namespace: {2}
+                    Path: {3}
+                    Url: {4}
+                    Directory: {5}",
+                    GitLabCI.Environment.Project.Id,
+                    GitLabCI.Environment.Project.Name,
+                    GitLabCI.Environment.Project.Namespace,
+                    GitLabCI.Environment.Project.Path,
+                    GitLabCI.Environment.Project.Url,
+                    GitLabCI.Environment.Project.Directory
+                    );
+            </code>
+            </example>
         </member>
         <member name="T:Cake.Common.Build.GitLabCI.Data.GitLabCIProjectInfo">
             <summary>
@@ -3722,6 +4794,48 @@
             <value>
             The GoCD pipeline information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"Pipeline:
+                    Name: {0}
+                    Counter: {1}
+                    Label: {2}",
+                    BuildSystem.GoCD.Environment.Pipeline.Name,
+                    BuildSystem.GoCD.Environment.Pipeline.Counter,
+                    BuildSystem.GoCD.Environment.Pipeline.Label
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"Pipeline:
+                    Name: {0}
+                    Counter: {1}
+                    Label: {2}",
+                    GoCD.Environment.Pipeline.Name,
+                    GoCD.Environment.Pipeline.Counter,
+                    GoCD.Environment.Pipeline.Label
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.Stage">
             <summary>
@@ -3730,6 +4844,44 @@
             <value>
               The GoCD stage information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"Stage:
+                    Name: {0}
+                    Counter: {1}",
+                    BuildSystem.GoCD.Environment.Stage.Name,
+                    BuildSystem.GoCD.Environment.Stage.Counter
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"Stage:
+                    Name: {0}
+                    Counter: {1}",
+                    GoCD.Environment.Stage.Name,
+                    GoCD.Environment.Stage.Counter
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.Repository">
             <summary>
@@ -3738,6 +4890,48 @@
             <value>
               The GoCD repository information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"Repository:
+                    Revision: {0}
+                    ToRevision: {1}
+                    FromRevision: {2}",
+                    BuildSystem.GoCD.Environment.Repository.Revision,
+                    BuildSystem.GoCD.Environment.Repository.ToRevision,
+                    BuildSystem.GoCD.Environment.Repository.FromRevision
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"Repository:
+                    Revision: {0}
+                    ToRevision: {1}
+                    FromRevision: {2}",
+                    GoCD.Environment.Repository.Revision,
+                    GoCD.Environment.Repository.ToRevision,
+                    GoCD.Environment.Repository.FromRevision
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.GoCDUrl">
             <summary>
@@ -3746,6 +4940,38 @@
             <value>
             The Go.CD URL.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"GoCDUrl: {0}",
+                    BuildSystem.GoCD.Environment.GoCDUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"GoCDUrl: {0}",
+                    GoCD.Environment.GoCDUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.EnvironmentName">
             <summary>
@@ -3754,6 +4980,38 @@
             <value>
             The environment name.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"EnvironmentName: {0}",
+                    BuildSystem.GoCD.Environment.EnvironmentName
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"EnvironmentName: {0}",
+                    GoCD.Environment.EnvironmentName
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.JobName">
             <summary>
@@ -3762,6 +5020,38 @@
             <value>
             The job name.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"JobName: {0}",
+                    BuildSystem.GoCD.Environment.JobName
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"JobName: {0}",
+                    GoCD.Environment.JobName
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.User">
             <summary>
@@ -3774,6 +5064,38 @@
             <value>
             The username of the user that triggered the build.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"User: {0}",
+                    BuildSystem.GoCD.Environment.User
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
+            <para>Via GoCD</para>
+            <example>
+            <code>
+            if (GoCD.IsRunningOnGoCD)
+            {
+                Information(
+                    @"User: {0}",
+                    GoCD.Environment.User
+                    );
+            }
+            else
+            {
+                Information("Not running on GoCD");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.GoCD.Data.GoCDEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -4271,6 +5593,48 @@
             <value>
             The build.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Build:
+                    BuildNumber: {0}
+                    BuildId: {1}
+                    BuildDisplayName: {2}",
+                    BuildSystem.Jenkins.Environment.Build.BuildNumber,
+                    BuildSystem.Jenkins.Environment.Build.BuildId,
+                    BuildSystem.Jenkins.Environment.Build.BuildDisplayName
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Build:
+                    BuildNumber: {0}
+                    BuildId: {1}
+                    BuildDisplayName: {2}",
+                    Jenkins.Environment.Build.BuildNumber,
+                    Jenkins.Environment.Build.BuildId,
+                    Jenkins.Environment.Build.BuildDisplayName
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.Repository">
             <summary>
@@ -4279,6 +5643,48 @@
             <value>
             The repository.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Repository:
+                    BranchName: {0}
+                    GitCommitSha: {1}
+                    GitBranch: {2}",
+                    BuildSystem.Jenkins.Environment.Repository.BranchName,
+                    BuildSystem.Jenkins.Environment.Repository.GitCommitSha,
+                    BuildSystem.Jenkins.Environment.Repository.GitBranch
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Repository:
+                    BranchName: {0}
+                    GitCommitSha: {1}
+                    GitBranch: {2}",
+                    Jenkins.Environment.Repository.BranchName,
+                    Jenkins.Environment.Repository.GitCommitSha,
+                    Jenkins.Environment.Repository.GitBranch
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.Job">
             <summary>
@@ -4287,6 +5693,48 @@
             <value>
             The job.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Job:
+                    JobName: {0}
+                    JobBaseName: {1}
+                    JobUrl: {2}",
+                    BuildSystem.Jenkins.Environment.Job.JobName,
+                    BuildSystem.Jenkins.Environment.Job.JobBaseName,
+                    BuildSystem.Jenkins.Environment.Job.JobUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Job:
+                    JobName: {0}
+                    JobBaseName: {1}
+                    JobUrl: {2}",
+                    Jenkins.Environment.Job.JobName,
+                    Jenkins.Environment.Job.JobBaseName,
+                    Jenkins.Environment.Job.JobUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.Node">
             <summary>
@@ -4295,6 +5743,44 @@
             <value>
             The node.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Node:
+                    NodeName: {0}
+                    NodeLabels: {1}",
+                    BuildSystem.Jenkins.Environment.Node.NodeName,
+                    BuildSystem.Jenkins.Environment.Node.NodeLabels
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Node:
+                    NodeName: {0}
+                    NodeLabels: {1}",
+                    Jenkins.Environment.Node.NodeName,
+                    Jenkins.Environment.Node.NodeLabels
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.Change">
             <summary>
@@ -4303,6 +5789,48 @@
             <value>
             The change.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Change:
+                    Id: {0}
+                    Url: {1}
+                    Title: {2}",
+                    BuildSystem.Jenkins.Environment.Change.Id,
+                    BuildSystem.Jenkins.Environment.Change.Url,
+                    BuildSystem.Jenkins.Environment.Change.Title
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"Change:
+                    Id: {0}
+                    Url: {1}
+                    Title: {2}",
+                    Jenkins.Environment.Change.Id,
+                    Jenkins.Environment.Change.Url,
+                    Jenkins.Environment.Change.Title
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.JenkinsHome">
             <summary>
@@ -4311,6 +5839,38 @@
             <value>
             The absolute path of the directory assigned on the master node for Jenkins to store data.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"JenkinsHome: {0}",
+                    BuildSystem.Jenkins.Environment.JenkinsHome
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"JenkinsHome: {0}",
+                    Jenkins.Environment.JenkinsHome
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.JenkinsUrl">
             <summary>
@@ -4319,6 +5879,38 @@
             <value>
             The full URL of Jenkins.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"JenkinsUrl: {0}",
+                    BuildSystem.Jenkins.Environment.JenkinsUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
+            <para>Via Jenkins</para>
+            <example>
+            <code>
+            if (Jenkins.IsRunningOnJenkins)
+            {
+                Information(
+                    @"JenkinsUrl: {0}",
+                    Jenkins.Environment.JenkinsUrl
+                    );
+            }
+            else
+            {
+                Information("Not running on Jenkins");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.Jenkins.Data.JenkinsEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -4677,6 +6269,40 @@
             <value>
             The TeamCity project information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TeamCity.IsRunningOnTeamCity)
+            {
+                Information(
+                    @"Project:
+                    Name: {0}",
+                    BuildSystem.TeamCity.Environment.Project.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on TeamCity");
+            }
+            </code>
+            </example>
+            <para>Via TeamCity</para>
+            <example>
+            <code>
+            if (TeamCity.IsRunningOnTeamCity)
+            {
+                Information(
+                    @"Project:
+                    Name: {0}",
+                    TeamCity.Environment.Project.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on TeamCity");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TeamCity.Data.TeamCityEnvironmentInfo.Build">
             <summary>
@@ -4685,6 +6311,44 @@
             <value>
             The TeamCity build information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TeamCity.IsRunningOnTeamCity)
+            {
+                Information(
+                    @"Build:
+                    BuildConfName: {0}
+                    Number: {1}",
+                    BuildSystem.TeamCity.Environment.Build.BuildConfName,
+                    BuildSystem.TeamCity.Environment.Build.Number
+                    );
+            }
+            else
+            {
+                Information("Not running on TeamCity");
+            }
+            </code>
+            </example>
+            <para>Via TeamCity</para>
+            <example>
+            <code>
+            if (TeamCity.IsRunningOnTeamCity)
+            {
+                Information(
+                    @"Build:
+                    BuildConfName: {0}
+                    Number: {1}",
+                    TeamCity.Environment.Build.BuildConfName,
+                    TeamCity.Environment.Build.Number
+                    );
+            }
+            else
+            {
+                Information("Not running on TeamCity");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TeamCity.Data.TeamCityEnvironmentInfo.PullRequest">
             <summary>
@@ -4693,6 +6357,44 @@
             <value>
             The TeamCity pull-request information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TeamCity.IsRunningOnTeamCity)
+            {
+                Information(
+                    @"PullRequest:
+                    IsPullRequest: {0}
+                    Number: {1}",
+                    BuildSystem.TeamCity.Environment.PullRequest.IsPullRequest,
+                    BuildSystem.TeamCity.Environment.PullRequest.Number
+                    );
+            }
+            else
+            {
+                Information("Not running on TeamCity");
+            }
+            </code>
+            </example>
+            <para>Via TeamCity</para>
+            <example>
+            <code>
+            if (TeamCity.IsRunningOnTeamCity)
+            {
+                Information(
+                    @"PullRequest:
+                    IsPullRequest: {0}
+                    Number: {1}",
+                    TeamCity.Environment.PullRequest.IsPullRequest,
+                    TeamCity.Environment.PullRequest.Number
+                    );
+            }
+            else
+            {
+                Information("Not running on TeamCity");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.TeamCity.Data.TeamCityEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -5295,6 +6997,48 @@
             <value>
             The TF Build repository information.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"Repository:
+                    Branch: {0}
+                    SourceVersion: {1}
+                    Shelveset: {2}",
+                    BuildSystem.TFBuild.Environment.Repository.Branch,
+                    BuildSystem.TFBuild.Environment.Repository.SourceVersion,
+                    BuildSystem.TFBuild.Environment.Repository.Shelveset
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
+            <para>Via TFBuild</para>
+            <example>
+            <code>
+            if (TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"Repository:
+                    Branch: {0}
+                    SourceVersion: {1}
+                    Shelveset: {2}",
+                    TFBuild.Environment.Repository.Branch,
+                    TFBuild.Environment.Repository.SourceVersion,
+                    TFBuild.Environment.Repository.Shelveset
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TFBuild.Data.TFBuildEnvironmentInfo.BuildDefinition">
             <summary>
@@ -5303,6 +7047,48 @@
             <value>
             The TF Build Definition.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"BuildDefinition:
+                    Id: {0}
+                    Name: {1}
+                    Version: {2}",
+                    BuildSystem.TFBuild.Environment.BuildDefinition.Id,
+                    BuildSystem.TFBuild.Environment.BuildDefinition.Name,
+                    BuildSystem.TFBuild.Environment.BuildDefinition.Version
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
+            <para>Via TFBuild</para>
+            <example>
+            <code>
+            if (TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"BuildDefinition:
+                    Id: {0}
+                    Name: {1}
+                    Version: {2}",
+                    TFBuild.Environment.BuildDefinition.Id,
+                    TFBuild.Environment.BuildDefinition.Name,
+                    TFBuild.Environment.BuildDefinition.Version
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TFBuild.Data.TFBuildEnvironmentInfo.Build">
             <summary>
@@ -5311,6 +7097,48 @@
             <value>
             The TF Build.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"Build:
+                    Id: {0}
+                    Number: {1}
+                    QueuedBy: {2}",
+                    BuildSystem.TFBuild.Environment.Build.Id,
+                    BuildSystem.TFBuild.Environment.Build.Number,
+                    BuildSystem.TFBuild.Environment.Build.QueuedBy
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
+            <para>Via TFBuild</para>
+            <example>
+            <code>
+            if (TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"Build:
+                    Id: {0}
+                    Number: {1}
+                    QueuedBy: {2}",
+                    TFBuild.Environment.Build.Id,
+                    TFBuild.Environment.Build.Number,
+                    TFBuild.Environment.Build.QueuedBy
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TFBuild.Data.TFBuildEnvironmentInfo.TeamProject">
             <summary>
@@ -5319,6 +7147,44 @@
             <value>
             The TF Team Project.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"TeamProject:
+                    Id: {0}
+                    Name: {1}",
+                    BuildSystem.TFBuild.Environment.TeamProject.Id,
+                    BuildSystem.TFBuild.Environment.TeamProject.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
+            <para>Via TFBuild</para>
+            <example>
+            <code>
+            if (TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"TeamProject:
+                    Id: {0}
+                    Name: {1}",
+                    TFBuild.Environment.TeamProject.Id,
+                    TFBuild.Environment.TeamProject.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TFBuild.Data.TFBuildEnvironmentInfo.Agent">
             <summary>
@@ -5327,6 +7193,44 @@
             <value>
             The TF Build agent.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"Agent:
+                    Id: {0}
+                    Name: {1}",
+                    BuildSystem.TFBuild.Environment.Agent.Id,
+                    BuildSystem.TFBuild.Environment.Agent.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
+            <para>Via TFBuild</para>
+            <example>
+            <code>
+            if (TFBuild.IsRunningOnTFBuild)
+            {
+                Information(
+                    @"Agent:
+                    Id: {0}
+                    Name: {1}",
+                    TFBuild.Environment.Agent.Id,
+                    TFBuild.Environment.Agent.Name
+                    );
+            }
+            else
+            {
+                Information("Not running on TFBuild");
+            }
+            </code>
+            </example>
         </member>
         <member name="T:Cake.Common.Build.TFBuild.Data.TFBuildInfo">
             <summary>
@@ -6195,6 +8099,48 @@
             <value>
             The build.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Build:
+                    Branch: {0}
+                    BuildDirectory: {1}
+                    BuildId: {2}",
+                    BuildSystem.TravisCI.Environment.Build.Branch,
+                    BuildSystem.TravisCI.Environment.Build.BuildDirectory,
+                    BuildSystem.TravisCI.Environment.Build.BuildId
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
+            <para>Via TravisCI</para>
+            <example>
+            <code>
+            if (TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Build:
+                    Branch: {0}
+                    BuildDirectory: {1}
+                    BuildId: {2}",
+                    TravisCI.Environment.Build.Branch,
+                    TravisCI.Environment.Build.BuildDirectory,
+                    TravisCI.Environment.Build.BuildId
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TravisCI.Data.TravisCIEnvironmentInfo.Job">
             <summary>
@@ -6203,6 +8149,48 @@
             <value>
             The job.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Job:
+                    JobId: {0}
+                    JobNumber: {1}
+                    OSName: {2}",
+                    BuildSystem.TravisCI.Environment.Job.JobId,
+                    BuildSystem.TravisCI.Environment.Job.JobNumber,
+                    BuildSystem.TravisCI.Environment.Job.OSName
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
+            <para>Via TravisCI</para>
+            <example>
+            <code>
+            if (TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Job:
+                    JobId: {0}
+                    JobNumber: {1}
+                    OSName: {2}",
+                    TravisCI.Environment.Job.JobId,
+                    TravisCI.Environment.Job.JobNumber,
+                    TravisCI.Environment.Job.OSName
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TravisCI.Data.TravisCIEnvironmentInfo.Repository">
             <summary>
@@ -6211,6 +8199,48 @@
             <value>
             The repository.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Repository:
+                    Commit: {0}
+                    CommitRange: {1}
+                    PullRequest: {2}",
+                    BuildSystem.TravisCI.Environment.Repository.Commit,
+                    BuildSystem.TravisCI.Environment.Repository.CommitRange,
+                    BuildSystem.TravisCI.Environment.Repository.PullRequest
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
+            <para>Via TravisCI</para>
+            <example>
+            <code>
+            if (TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Repository:
+                    Commit: {0}
+                    CommitRange: {1}
+                    PullRequest: {2}",
+                    TravisCI.Environment.Repository.Commit,
+                    TravisCI.Environment.Repository.CommitRange,
+                    TravisCI.Environment.Repository.PullRequest
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TravisCI.Data.TravisCIEnvironmentInfo.CI">
             <summary>
@@ -6219,6 +8249,38 @@
             <value>
             <c>true</c> if ci; otherwise, <c>false</c>.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"CI: {0}",
+                    BuildSystem.TravisCI.Environment.CI
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
+            <para>Via TravisCI</para>
+            <example>
+            <code>
+            if (TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"CI: {0}",
+                    TravisCI.Environment.CI
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TravisCI.Data.TravisCIEnvironmentInfo.Home">
             <summary>
@@ -6227,6 +8289,38 @@
             <value>
             The home.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Home: {0}",
+                    BuildSystem.TravisCI.Environment.Home
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
+            <para>Via TravisCI</para>
+            <example>
+            <code>
+            if (TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Home: {0}",
+                    TravisCI.Environment.Home
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="P:Cake.Common.Build.TravisCI.Data.TravisCIEnvironmentInfo.Travis">
             <summary>
@@ -6235,6 +8329,38 @@
             <value>
               <c>true</c> if Travis; otherwise, <c>false</c>.
             </value>
+            <para>Via BuildSystem</para>
+            <example>
+            <code>
+            if (BuildSystem.TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Travis: {0}",
+                    BuildSystem.TravisCI.Environment.Travis
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
+            <para>Via TravisCI</para>
+            <example>
+            <code>
+            if (TravisCI.IsRunningOnTravisCI)
+            {
+                Information(
+                    @"Travis: {0}",
+                    TravisCI.Environment.Travis
+                    );
+            }
+            else
+            {
+                Information("Not running on TravisCI");
+            }
+            </code>
+            </example>
         </member>
         <member name="M:Cake.Common.Build.TravisCI.Data.TravisCIEnvironmentInfo.#ctor(Cake.Core.ICakeEnvironment)">
             <summary>
@@ -10867,6 +12993,15 @@
             </summary>
             <value>The package language.</value>
         </member>
+        <member name="P:Cake.Common.Tools.NuGet.Pack.NuGetPackSettings.OutputToToolFolder">
+            <summary>
+            Gets or sets a value indicating whether the files should be packed into the tool folder.
+            Defaults to <c>false</c>.
+            </summary>
+            <value>
+            <c>true</c> if the output should be placed in the tool folder inside the nuget package; otherwise <c>false</c>.
+            </value>
+        </member>
         <member name="T:Cake.Common.Tools.NuGet.Pack.NuSpecContent">
             <summary>
             Represents a NuGet nuspec file
@@ -10912,9 +13047,9 @@
         </member>
         <member name="P:Cake.Common.Tools.NuGet.Pack.NuSpecDependency.TargetFramework">
             <summary>
-            Gets or sets the dependency's version.
+            Gets or sets the target framework for the dependency.
             </summary>
-            <value>The dependency's version.</value>
+            <value>The target framework for the dependency.</value>
         </member>
         <member name="T:Cake.Common.Tools.NuGet.Push.NamespaceDoc">
             <summary>
@@ -12488,6 +14623,16 @@
             Outputs labels for all tests.
             </summary>
         </member>
+        <member name="F:Cake.Common.Tools.NUnit.NUnit3Labels.Before">
+            <summary>
+            Outputs labels at the start of every test.
+            </summary>
+        </member>
+        <member name="F:Cake.Common.Tools.NUnit.NUnit3Labels.After">
+            <summary>
+            Outputs labels at the end of every test.
+            </summary>
+        </member>
         <member name="T:Cake.Common.Tools.NUnit.NUnit3ProcessOption">
             <summary>
             Represents the various ways NUnit loads tests in processes.
@@ -12700,8 +14845,9 @@
             Gets or sets a value specifying whether to write test case names to the output.
             </summary>
             <value>
-            <c>On</c> to write labels for tests that are run or <c>All</c> to write labels
-            for all tests.
+            <c>On</c> to write labels for tests that are run,<c>All</c> to write labels
+            for all tests,<c>Before</c> to write labels at the start of every test
+            ,or <c>After</c> to write labels at the end of every test.
             </value>
         </member>
         <member name="P:Cake.Common.Tools.NUnit.NUnit3Settings.TeamCity">
@@ -13135,6 +15281,14 @@
             </summary>
             <value>
             <c>true</c> to run tests in an x86 process on 64 bit systems; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.NUnit.NUnitSettings.Labels">
+            <summary>
+            Gets or sets a value indicating whether to cause an identifying label to be displayed at the start of each test case.
+            </summary>
+            <value>
+            <c>true</c> to cause an identifying label to be displayed at the start of each test case; otherwise, <c>false</c>.
             </value>
         </member>
         <member name="T:Cake.Common.Tools.OctopusDeploy.NamespaceDoc">
@@ -15770,6 +17924,42 @@
             The traits to exclude.
             </value>
         </member>
+        <member name="P:Cake.Common.Tools.XUnit.XUnit2Settings.NamespacesToInclude">
+            <summary>
+            Gets the namespaces to include.
+            </summary>
+            <remarks>
+            Runs all methods in a given namespace (i.e., 'MyNamespace.MySubNamespace')
+            If more than one is specified, it acts as an OR operation.
+            </remarks>
+            <value>
+            The namespaces to include
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.XUnit.XUnit2Settings.ClassesToInclude">
+            <summary>
+            Gets the class names to include.
+            </summary>
+            <remarks>
+            Runs all methods in a given test class (should be fully specified; i.e., 'MyNamespace.MyClass')
+            If more than one is specified, it acts as an OR operation.
+            </remarks>
+            <value>
+            The class names to include
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.XUnit.XUnit2Settings.MethodsToInclude">
+            <summary>
+            Gets the test methods to include.
+            </summary>
+            <remarks>
+            Runs the given test methods (should be fully specified; i.e., 'MyNamespace.MyClass.MyTestMethod')
+            If more than one is specified, it acts as an OR operation.
+            </remarks>
+            <value>
+            The namespaces to include
+            </value>
+        </member>
         <member name="M:Cake.Common.Tools.XUnit.XUnit2Settings.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:Cake.Common.Tools.XUnit.XUnit2Settings"/> class.
@@ -15796,6 +17986,30 @@
             <param name="settings">The settings.</param>
             <param name="name">The trait name.</param>
             <param name="values">The trait values.</param>
+            <returns>The same <see cref="T:Cake.Common.Tools.XUnit.XUnit2Settings"/> instance so that multiple calls can be chained.</returns>
+        </member>
+        <member name="M:Cake.Common.Tools.XUnit.XUnit2SettingsExtensions.IncludeNamespace(Cake.Common.Tools.XUnit.XUnit2Settings,System.String)">
+            <summary>
+            Adds a namespace to the settings, to include in test execution.  Namespace should be fully qualified; i.e., MyNameSpace.MySubNamespace
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="namespaceToInclude">The namespace to include.</param>
+            <returns>The same <see cref="T:Cake.Common.Tools.XUnit.XUnit2Settings"/> instance so that multiple calls can be chained.</returns>
+        </member>
+        <member name="M:Cake.Common.Tools.XUnit.XUnit2SettingsExtensions.IncludeClass(Cake.Common.Tools.XUnit.XUnit2Settings,System.String)">
+            <summary>
+            Adds a class name to the settings, to include in test execution. Class name should be fully qualified; i.e., MyNameSpace.MyClassName
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="classNameToInclude">The class name to include.</param>
+            <returns>The same <see cref="T:Cake.Common.Tools.XUnit.XUnit2Settings"/> instance so that multiple calls can be chained.</returns>
+        </member>
+        <member name="M:Cake.Common.Tools.XUnit.XUnit2SettingsExtensions.IncludeMethod(Cake.Common.Tools.XUnit.XUnit2Settings,System.String)">
+            <summary>
+            Adds a method name to the settings, to include in test execution. Method name should be fully qualified; i.e., MyNameSpace.MyClassName.MyMethod
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="methodNameToInclude">The method name to include.</param>
             <returns>The same <see cref="T:Cake.Common.Tools.XUnit.XUnit2Settings"/> instance so that multiple calls can be chained.</returns>
         </member>
         <member name="T:Cake.Common.Tools.XUnit.XUnitAliases">
@@ -17511,6 +19725,23 @@
             Using a double wildcard - <c>**</c> - implies a recursive exclude pattern.
             </summary>
         </member>
+        <member name="T:Cake.Common.Tools.Chocolatey.Pack.ChocolateyNuSpecDependency">
+            <summary>
+            Represents a Chocolatey NuGet nuspec dependency
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.Chocolatey.Pack.ChocolateyNuSpecDependency.Id">
+            <summary>
+            Gets or sets the dependency's package ID.
+            </summary>
+            <value>The dependency's package ID.</value>
+        </member>
+        <member name="P:Cake.Common.Tools.Chocolatey.Pack.ChocolateyNuSpecDependency.Version">
+            <summary>
+            Gets or sets the dependency's version.
+            </summary>
+            <value>The dependency's version.</value>
+        </member>
         <member name="T:Cake.Common.Tools.Chocolatey.Pack.ChocolateyPacker">
             <summary>
             The Chocolatey packer.
@@ -17671,6 +19902,12 @@
         <member name="P:Cake.Common.Tools.Chocolatey.Pack.ChocolateyPackSettings.Files">
             <summary>
             Gets or sets the package files.
+            </summary>
+            <value>The package files.</value>
+        </member>
+        <member name="P:Cake.Common.Tools.Chocolatey.Pack.ChocolateyPackSettings.Dependencies">
+            <summary>
+            Gets or sets the package dependencies.
             </summary>
             <value>The package files.</value>
         </member>
@@ -18430,6 +20667,13 @@
             This represents the <c>/AttributeFilters</c> option.
             </summary>
         </member>
+        <member name="P:Cake.Common.Tools.DotCover.DotCoverCoverageSettings.ProcessFilters">
+            <summary>
+            Gets the coverage process filters using the following syntax: +:test.exe;program.exe*;
+            Use -:anexe to exclude an assembly from code coverage.
+            This represents the <c>/ProcessFilters</c> option.
+            </summary>
+        </member>
         <member name="P:Cake.Common.Tools.DotCover.DotCoverCoverageSettings.DisableDefaultFilters">
             <summary>
             Gets or sets a value indicating whether the default (automatically added) filters should be disabled
@@ -18470,6 +20714,15 @@
             </summary>
             <param name="settings">The settings.</param>
             <param name="attributeFilter">The filter.</param>
+            <typeparam name="T">The settings type, derived from <see cref="T:Cake.Common.Tools.DotCover.DotCoverCoverageSettings"/></typeparam>
+            <returns>The same <see cref="T:Cake.Common.Tools.DotCover.DotCoverCoverageSettings"/> instance so that multiple calls can be chained.</returns>
+        </member>
+        <member name="M:Cake.Common.Tools.DotCover.DotCoverCoverageSettingsExtensions.WithProcessFilter``1(``0,System.String)">
+            <summary>
+            Adds the filter
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="filter">The processfilter.</param>
             <typeparam name="T">The settings type, derived from <see cref="T:Cake.Common.Tools.DotCover.DotCoverCoverageSettings"/></typeparam>
             <returns>The same <see cref="T:Cake.Common.Tools.DotCover.DotCoverCoverageSettings"/> instance so that multiple calls can be chained.</returns>
         </member>
@@ -20704,6 +22957,11 @@
             Gets or sets a file to write diagnostic messages to.
             </summary>
         </member>
+        <member name="P:Cake.Common.Tools.DotNetCore.Test.DotNetCoreTestSettings.ResultsDirectory">
+            <summary>
+            Gets or sets the results directory. This setting is only available from 2.0.0 upward.
+            </summary>
+        </member>
         <member name="T:Cake.Common.Tools.DotNetCore.Tool.DotNetCoreToolRunner">
             <summary>
             .NET Core Extensibility Commands Runner.
@@ -22334,6 +24592,11 @@
             Gets or sets the assembly Semantic Version.
             </summary>
         </member>
+        <member name="P:Cake.Common.Tools.GitVersion.GitVersion.AssemblySemFileVer">
+            <summary>
+            Gets or sets the assembly semantic file version.
+            </summary>
+        </member>
         <member name="P:Cake.Common.Tools.GitVersion.GitVersion.FullSemVer">
             <summary>
             Gets or sets the full Semantic Version.
@@ -23163,6 +25426,260 @@
         <member name="F:Cake.Common.Tools.InspectCode.SettingsLayer.ProjectPersonal">
             <summary>
             SettingsLayer: <c>ProjectPersonal</c>. This layer is saved in <c>%ProjectName%.csproj.DotSettings.user</c>.
+            </summary>
+        </member>
+        <member name="T:Cake.Common.Tools.MSpec.MSpecAliases">
+            <summary>
+            <para>Contains functionality related to running <see href="https://github.com/machine/machine.specifications">Machine.Specifications</see> tests.</para>
+            <para>
+            In order to use the commands for this alias, include the following in your build.cake file to download and
+            install from NuGet.org, or specify the ToolPath within the <see cref="T:Cake.Common.Tools.MSpec.MSpecSettings" /> class:
+            <code>
+            #tool "nuget:?package=mspec.runner.console"
+            </code>
+            </para>
+            </summary>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecAliases.MSpec(Cake.Core.ICakeContext,System.String)">
+            <summary>
+            Runs all MSpec tests in the assemblies matching the specified pattern.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="pattern">The pattern.</param>
+            <example>
+            <code>
+            MSpec("./src/**/bin/Release/*.Tests.dll");
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecAliases.MSpec(Cake.Core.ICakeContext,System.String,Cake.Common.Tools.MSpec.MSpecSettings)">
+            <summary>
+            Runs all MSpec tests in the assemblies matching the specified pattern.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="pattern">The pattern.</param>
+            <param name="settings">The settings.</param>
+            <example>
+            <code>
+            MSpec("./src/**/bin/Release/*.Tests.dll",
+                 new MSpecSettings {
+                    Parallelism = ParallelismOption.All,
+                    HtmlReport = true,
+                    NoAppDomain = true,
+                    OutputDirectory = "./build"
+                });
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecAliases.MSpec(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Runs all MSpec tests in the specified assemblies.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="assemblies">The assemblies.</param>
+            <example>
+            <code>
+            MSpec(new []{
+                "./src/Cake.Common.Tests/bin/Release/Cake.Common.Tests.dll",
+                "./src/Cake.Core.Tests/bin/Release/Cake.Core.Tests.dll",
+                "./src/Cake.NuGet.Tests/bin/Release/Cake.NuGet.Tests.dll",
+                "./src/Cake.Tests/bin/Release/Cake.Tests.dll"
+                });
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecAliases.MSpec(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Core.IO.FilePath})">
+            <summary>
+            Runs all MSpec tests in the specified assemblies.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="assemblies">The assemblies.</param>
+            <example>
+            <code>
+            var testAssemblies = GetFiles("./src/**/bin/Release/*.Tests.dll");
+            MSpec(testAssemblies);
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecAliases.MSpec(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{System.String},Cake.Common.Tools.MSpec.MSpecSettings)">
+            <summary>
+            Runs all MSpec tests in the specified assemblies.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="assemblies">The assemblies.</param>
+            <param name="settings">The settings.</param>
+            <example>
+            <code>
+            MSpec(new []{
+                "./src/Cake.Common.Tests/bin/Release/Cake.Common.Tests.dll",
+                "./src/Cake.Core.Tests/bin/Release/Cake.Core.Tests.dll",
+                "./src/Cake.NuGet.Tests/bin/Release/Cake.NuGet.Tests.dll",
+                "./src/Cake.Tests/bin/Release/Cake.Tests.dll"
+                 },
+                 new MSpecSettings {
+                    Parallelism = ParallelismOption.All,
+                    HtmlReport = true,
+                    NoAppDomain = true,
+                    OutputDirectory = "./build"
+                });
+            </code>
+            </example>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecAliases.MSpec(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Core.IO.FilePath},Cake.Common.Tools.MSpec.MSpecSettings)">
+            <summary>
+            Runs all MSpec tests in the specified assemblies.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="assemblies">The assemblies.</param>
+            <param name="settings">The settings.</param>
+            <example>
+            <code>
+            var testAssemblies = GetFiles("./src/**/bin/Release/*.Tests.dll");
+            MSpec(testAssemblies,
+                 new MSpecSettings {
+                    Parallelism = ParallelismOption.All,
+                    HtmlReport = true,
+                    NoAppDomain = true,
+                    OutputDirectory = "./build"
+                });
+            </code>
+            </example>
+        </member>
+        <member name="T:Cake.Common.Tools.MSpec.MSpecRunner">
+            <summary>
+            The MSpec unit test runner.
+            </summary>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecRunner.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Common.Tools.MSpec.MSpecRunner"/> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The environment.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="tools">The tool locator.</param>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecRunner.Run(System.Collections.Generic.IEnumerable{Cake.Core.IO.FilePath},Cake.Common.Tools.MSpec.MSpecSettings)">
+            <summary>
+            Runs the tests in the specified assemblies, using the specified settings.
+            </summary>
+            <param name="assemblyPaths">The assembly paths.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecRunner.GetToolName">
+            <summary>
+            Gets the name of the tool.
+            </summary>
+            <returns>The name of the tool.</returns>
+        </member>
+        <member name="M:Cake.Common.Tools.MSpec.MSpecRunner.GetToolExecutableNames">
+            <summary>
+            Gets the possible names of the tool executable.
+            </summary>
+            <returns>The tool executable name.</returns>
+        </member>
+        <member name="T:Cake.Common.Tools.MSpec.MSpecSettings">
+            <summary>
+                Contains settings used by <see cref="T:Cake.Common.Tools.MSpec.MSpecRunner" />.
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Filters">
+            <summary>
+                Gets or sets the path to the filter file specifying contexts to execute(full type name, one per line). Takes precedence over
+                tags
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.TeamCity">
+            <summary>
+                Gets or sets a value indicating whether reporting for TeamCity CI integration(also auto - detected)
+            </summary>
+            <value>
+                <c>true</c> to turn on TeamCity service messages; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.NoColor">
+            <summary>
+                Gets or sets a value indicating whether to suppress colored console output
+            </summary>
+            <value>
+                <c>true</c> disable color output; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.XmlReport">
+            <summary>
+                Gets or sets a value indicating whether an XML report should be generated.
+            </summary>
+            <value>
+                <c>true</c> if an XML report should be generated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.HtmlReport">
+            <summary>
+                Gets or sets a value indicating whether an HTML report should be generated.
+            </summary>
+            <value>
+                <c>true</c> if an HTML report should be generated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.ReportName">
+            <summary>
+                Gets or sets the name that should be used for the HTML and XML reports.
+            </summary>
+            <value>The custom report name.</value>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Include">
+            <summary>
+                 Gets or sets Executes all specifications in contexts with these comma delimited tags. Ex. - i "foo,bar,foo_bar"
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Exclude">
+            <summary>
+                Gets or sets Exclude specifications in contexts with these comma delimited tags. Ex. - x "foo,bar,foo_bar"
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.TimeInfo">
+            <summary>
+                Gets or sets a value indicating whether to show time-related information in HTML output
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Silent">
+            <summary>
+                Gets or sets a value indicating whether to suppress progress output(print fatal errors, failures and summary)
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Progress">
+            <summary>
+                Gets or sets a value indicating whether to print dotted progress output
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Wait">
+            <summary>
+                Gets or sets a value indicating whether to wait 15 seconds for debugger to be attached
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.NoTeamCity">
+            <summary>
+                Gets or sets a value indicating whether to disable TeamCity autodetection
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.Appveyor">
+            <summary>
+                Gets or sets a value indicating whether to enable reporting for AppVeyor CI integration(also auto - detected)
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.NoAppveyor">
+            <summary>
+                Gets or sets a value indicating whether disable AppVeyor autodetection
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.OutputDirectory">
+            <summary>
+                Gets or sets output directory for reports
+            </summary>
+        </member>
+        <member name="P:Cake.Common.Tools.MSpec.MSpecSettings.UseX86">
+            <summary>
+                Gets or sets a value indicating whether to use X86
             </summary>
         </member>
         <member name="T:Cake.Common.Tools.NSIS.MakeNSISRunner">

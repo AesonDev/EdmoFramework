@@ -41,23 +41,29 @@ Task("Build")
     .IsDependentOn("Clean")
     .IsDependentOn("Restore")
     .DoesForEach(csProjPathArray, (file) => { 
-
-        ProjectParserResult t = Pars(file.FullPath);
-        
         
         versionInfo = GitVersion(
             new GitVersionSettings {
                 RepositoryPath = ".",
                 UpdateAssemblyInfo = true                
             }
-        );
+        );   
 
         Information(versionInfo.FullSemVer);
+
+       var packageVersion =  versionInfo.NuGetVersionV2.Remove(versionInfo.NuGetVersionV2.Length -4) + versionInfo.CommitsSinceVersionSourcePadded;
+       Information(packageVersion);
+
+        XmlPoke(file.FullPath, "/Project/PropertyGroup/Version", versionInfo.FullSemVer.ToString());
+        XmlPoke(file.FullPath, "/Project/PropertyGroup/FileVersion", versionInfo.AssemblySemVer.ToString());
+         XmlPoke(file.FullPath, "/Project/PropertyGroup/PackageVersion", packageVersion.ToString());
+
+
         DotNetCoreBuild(
             file.FullPath,
             new DotNetCoreBuildSettings{
                 Configuration = configuration,
-                ArgumentCustomization = args => args.Append("--no-restore /p:SemVer=" + versionInfo.NuGetVersionV2)
+                //ArgumentCustomization = args => args.Append("--no-restore /p:Version=" + versionInfo.FullSemVer + " /p:FileVersion=" + versionInfo.AssemblySemVer )
             }
         );
     });
@@ -77,14 +83,17 @@ Task("IncrementBuildNumber")
 
 Task("Restore")   
     .IsDependentOn("Clean")
-    .Does(() =>{
-      DotNetCoreRestore(".");
-    });
+     .Does(() => {   
+        DotNetCoreRestore(".", new DotNetCoreRestoreSettings {
+          
+        });
+     });
 
 Task("Clean")
     .DoesForEach(csProjPathArray, (file) => {
    
         DotNetCoreClean(file.FullPath);
+        CleanDirectory("./artifacts/");
     });
 
 Task("PackageNuget")
@@ -94,9 +103,10 @@ Task("PackageNuget")
            Configuration = configuration,
            OutputDirectory = "./artifacts/",
            NoBuild = true
+           //ArgumentCustomization = args => args.Append(" /p:PackageVersion=" + versionInfo.NuGetVersionV2 )
           
         });
-    });
+    }).DeferOnError();
 
 
 

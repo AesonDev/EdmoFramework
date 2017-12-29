@@ -1,14 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Product>EdmoFramework</Product>
-    <Major>$(Major)</Major>
-    <Minor>$(Minor)</Minor>
-    <Patch>$(Patch)</Patch>
-    <Suffix>$(Suffix)</Suffix>
-    <FileVersion>$(Major).$(Minor).$(Patch).$(Suffix)</FileVersion>
-    <VersionPrefix>$(Major).$(Minor).$(Patch)</VersionPrefix> 
-    <VersionSuffix Condition=" '$(Suffix)' != ''" >$(Suffix)-$(BuildNumber)</VersionSuffix> 
+    <Product>EdmoFramework</Product>   
+    <FileVersion>0.2.0.0</FileVersion>
+    <Version>0.2.0-VersionPackagesAndDLL.1+15</Version>  
+    <PackageVersion>0.2.0-versionpackagesa0015</PackageVersion>  
     <PackageTags>$(TargetFramework)</PackageTags>
   </PropertyGroup>
   <ItemGroup>
