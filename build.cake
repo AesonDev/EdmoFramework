@@ -51,9 +51,12 @@ Task("Build")
 
         Information(versionInfo.FullSemVer);
 
+       var packageVersion =  versionInfo.NuGetVersionV2.Remove(versionInfo.NuGetVersionV2.Length -4) + versionInfo.CommitsSinceVersionSourcePadded;
+       Information(packageVersion);
+
         XmlPoke(file.FullPath, "/Project/PropertyGroup/Version", versionInfo.FullSemVer.ToString());
         XmlPoke(file.FullPath, "/Project/PropertyGroup/FileVersion", versionInfo.AssemblySemVer.ToString());
-         XmlPoke(file.FullPath, "/Project/PropertyGroup/PackageVersion", versionInfo.NuGetVersionV2.ToString());
+         XmlPoke(file.FullPath, "/Project/PropertyGroup/PackageVersion", packageVersion.ToString());
 
 
         DotNetCoreBuild(

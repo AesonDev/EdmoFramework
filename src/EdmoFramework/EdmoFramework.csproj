@@ -3,8 +3,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Product>EdmoFramework</Product>   
     <FileVersion>0.2.0.0</FileVersion>
-    <Version>0.2.0-VersionPackagesAndDLL.1+13</Version>  
-    <PackageVersion>0.2.0-versionpackagesa0001</PackageVersion>  
+    <Version>0.2.0-VersionPackagesAndDLL.1+14</Version>  
+    <PackageVersion>0.2.0-versionpackagesa0014</PackageVersion>  
     <PackageTags>$(TargetFramework)</PackageTags>
   </PropertyGroup>
   <ItemGroup>
